@@ -1,9 +1,0 @@
-[package]
-authors = ["Saverio Miroddi <saverio.pub2@gmail.com>"]
-edition = "2018"
-name = "cavern-macroquad"
-version = "0.1.0"
-
-[dependencies]
-macroquad = "0.3.15"
-phf = {version = "0.10.1", features = ["macros"]}

@@ -122,7 +122,7 @@ impl State {
         // filter an iterator.
         let entities_to_remove = entities_query
             .iter(&self.ecs.world)
-            .filter_map(|e| (!entities_to_keep.contains(&e)).then(|| e))
+            .filter_map(|e| (!entities_to_keep.contains(&e)).then_some(e))
             .collect::<Vec<_>>();
         // We don't need flushing; when manipulating World directly in Bevy, flushes are implicit.
         for e in entities_to_remove {

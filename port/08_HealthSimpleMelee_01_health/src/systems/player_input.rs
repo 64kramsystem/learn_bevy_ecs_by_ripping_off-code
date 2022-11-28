@@ -23,7 +23,7 @@ pub fn player_input(
                 let destination = pos.0 + delta;
                 move_events.send(WantsToMove {
                     entity,
-                    destination: destination,
+                    destination,
                 });
             }
         }

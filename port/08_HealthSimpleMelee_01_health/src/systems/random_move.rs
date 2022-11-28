@@ -15,7 +15,7 @@ pub fn random_move(
 
         move_events.send(WantsToMove {
             entity,
-            destination: destination,
+            destination,
         });
     })
 }

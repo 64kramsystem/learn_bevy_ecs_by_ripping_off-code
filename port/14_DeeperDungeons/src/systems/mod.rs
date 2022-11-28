@@ -102,7 +102,9 @@ pub fn build_system_sets(app: &mut App) {
         MonsterCombat,
         ConditionSet::new()
             .run_if_resource_equals(MonsterTurn)
-            .with_system(use_items::use_items)
+            // We can't do this with the current (event-based) design, otherwise events are processed
+            // twice; see page 254 of the source book for the original logic.
+            // .with_system(use_items::use_items)
             .with_system(combat::combat)
             .into(),
     );

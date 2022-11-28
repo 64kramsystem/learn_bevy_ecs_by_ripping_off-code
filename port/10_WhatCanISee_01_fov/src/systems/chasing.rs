@@ -36,7 +36,7 @@ pub fn chasing(
                     if player.get(victim).is_ok() {
                         attack_events.send(WantsToAttack {
                             attacker: entity,
-                            victim: victim,
+                            victim,
                         });
                     }
                     attacked = true;
@@ -45,7 +45,7 @@ pub fn chasing(
 
             if !attacked {
                 move_events.send(WantsToMove {
-                    entity: entity,
+                    entity,
                     destination,
                 });
             }

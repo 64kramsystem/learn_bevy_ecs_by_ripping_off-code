@@ -20,7 +20,7 @@ pub fn combat(
 
         let weapon_damage: i32 = carried_weapons_query
             .iter()
-            .filter_map(|(carried, dmg)| (carried.0 == *attacker).then(|| dmg.0))
+            .filter_map(|(carried, dmg)| (carried.0 == *attacker).then_some(dmg.0))
             .sum();
 
         let final_damage = base_damage + weapon_damage;

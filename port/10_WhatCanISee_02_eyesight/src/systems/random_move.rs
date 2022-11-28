@@ -30,7 +30,7 @@ pub fn random_move(
                 if player_query.get(victim).is_ok() {
                     attack_events.send(WantsToAttack {
                         attacker: entity,
-                        victim: victim,
+                        victim,
                     });
                 }
                 attacked = true;

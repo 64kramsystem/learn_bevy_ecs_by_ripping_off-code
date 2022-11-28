@@ -18,6 +18,7 @@ pub fn use_items(
                 map.revealed_tiles.iter_mut().for_each(|t| *t = true);
             }
         }
+        println!("- despawning {:?}", activate.item);
         commands.entity(activate.item).despawn();
     }
 

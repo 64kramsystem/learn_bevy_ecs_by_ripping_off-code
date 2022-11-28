@@ -137,7 +137,7 @@ impl MapBuilder {
     }
 
     fn spawn_monsters(&self, start: &Point, rng: &mut RandomNumberGenerator) -> Vec<Point> {
-        const NUM_MONSTERS: usize = 50;
+        const NUM_MONSTERS: usize = 500;
         let mut spawnable_tiles: Vec<Point> = self
             .map
             .tiles

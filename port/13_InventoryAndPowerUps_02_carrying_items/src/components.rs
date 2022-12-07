@@ -50,12 +50,6 @@ pub struct Name(pub String);
 pub struct Carried(pub Entity);
 
 #[derive(Component)]
-pub struct ActivateItem {
-    pub used_by: Entity,
-    pub item: Entity,
-}
-
-#[derive(Component)]
 pub struct FieldOfView {
     pub visible_tiles: HashSet<Point>,
     pub radius: i32,

@@ -12,6 +12,7 @@ mod themes;
 pub use themes::*;
 
 trait MapArchitect {
+    #[allow(clippy::new_ret_no_self, clippy::wrong_self_convention)]
     fn new(&mut self, rng: &mut RandomNumberGenerator) -> MapBuilder;
 }
 

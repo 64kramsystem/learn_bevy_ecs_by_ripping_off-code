@@ -94,7 +94,7 @@ impl Templates {
                         entity.insert(ProvidesDungeonMap {});
                     }
                     _ => {
-                        println!("Warning: we don't know how to provide {}", provides);
+                        println!("Warning: we don't know how to provide {provides}");
                     }
                 }
             }

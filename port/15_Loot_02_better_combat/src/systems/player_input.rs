@@ -1,5 +1,6 @@
 use crate::prelude::*;
 
+#[allow(clippy::too_many_arguments)]
 pub fn player_input(
     mut commands: Commands,
     mut move_events: EventWriter<WantsToMove>,
@@ -117,7 +118,8 @@ fn use_item(
         .filter(|(_, carried)| carried.0 == player_entity)
         .enumerate()
         .filter(|(item_count, (_, _))| *item_count == n)
-        .find_map(|(_, (item_entity, _))| Some(item_entity));
+        .map(|(_, (item_entity, _))| item_entity)
+        .next();
 
     if let Some(item_entity) = item_entity {
         active_item_events.send(ActivateItem {

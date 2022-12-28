@@ -73,7 +73,7 @@ pub fn apply_prefab(mb: &mut MapBuilder, rng: &mut RandomNumberGenerator) {
                     }
                     '-' => mb.map.tiles[idx] = TileType::Floor,
                     '#' => mb.map.tiles[idx] = TileType::Wall,
-                    _ => println!("No idea what to do with [{}]", c),
+                    _ => println!("No idea what to do with [{c}]"),
                 }
                 i += 1;
             }
